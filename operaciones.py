@@ -1,37 +1,40 @@
-def sumar(a, b):
-    """Funcion que suma dos numeros"""
-    return a + b
+# Entrada de números ingresados por el usuario
+numero1 = float(input("Ingresa el primer número: "))
+numero2 = float(input("Ingresa el segundo número: "))
+# Suma
+suma = numero1 + numero2
+print("La suma de", numero1, "+", numero2, "es:", suma)
 
-def restar(a, b):
-    """Funcion que resta dos numeros"""
-    return a - b
+# Resta
+resta = numero1 - numero2
+print("La resta de", numero1, "-", numero2, "es:", resta)
 
-def multiplicar(a, b):
-    """Funcion que multiplica dos numeros"""
-    return a * b
+# Multiplicación
+multiplicacion = numero1 * numero2
+print("La multiplicación de", numero1, "*", numero2, "es:", multiplicacion)
 
-def dividir(a, b):
-    """Funcion que divide dos numeros"""
-    if b == 0:
-        raise ValueError("No es posible dividir entre cero")
-    return a / b
+# División
+if numero2 == 0:
+    print("Error: No es posible dividir por cero.")
+else:
+    division = numero1 / numero2
+    print("La división de", numero1, "/", numero2, "es:", division)
 
-def main():
-    """Funcion principal del programa"""
-    operacion = input("Ingrese la operacion que desea realizar (+,-,*,/): ")
-    a = float(input("Ingrese el primer numero: "))
-    b = float(input("Ingrese el segundo numero: "))
+num = int(input("Introduzca un número entero positivo mayor que 2: "))
 
-    if operacion == '+':
-        resultado = sumar(a, b)
-    elif operacion == '-':
-        resultado = restar(a, b)
-    elif operacion == '*':
-        resultado = multiplicar(a, b)
-    elif operacion == '/':
-        resultado = dividir(a, b)
-    else:
-        print("Operacion no valida.")
-        return
+divisor = 2
 
-    print(f"El resultado de la operacion es: {resultado}")
+while num % divisor != 0:
+    divisor = divisor + 1
+
+if divisor == num:
+    print(str(num) + " es primo")
+else:
+    print(str(num) + " no es primo")
+
+def verificar(self):
+    codigo = self.codigoT.get()
+
+    for i in codigo:
+        if i not in '0123456789':
+            self.codigoT.delete(codigo.isdigit(i), codigo.isdigit(i)+1)
